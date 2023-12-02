@@ -1,0 +1,27 @@
+$primary-color: rgb(85, 85, 85);
+$secondary-color: rgb(255, 255, 255);
+$tertiary-color: rgb(163, 163, 163);
+$font-size-small: 1.3rem;
+$font-size-large: 1.5rem;
+$padding-container: 1.5rem;
+
+@mixin transform-hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+@mixin link-hover {
+  color: $tertiary-color;
+  text-decoration: underline;
+}
+
+@mixin border-container-style {
+  border: rgb(163, 163, 163) 0.1rem solid;
+  border-radius: 2rem;
+}
+
+@mixin respond-large {
+  @media only screen and (min-width: 768px) {
+    @content
+  }
+}

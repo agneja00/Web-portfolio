@@ -1,0 +1,129 @@
+@import "variables.scss";
+
+.header {
+  background-color: rgb(0, 0, 0);
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $padding-container;
+  }
+
+  &__greeting {
+    width: 13ch;
+    animation: typing 2.5s steps(13) infinite alternate-reverse;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.1rem solid $secondary-color;
+    color: $secondary-color;
+    font-family: monospace;
+  }
+
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  &__menu {
+    width: 2rem;
+    height: 1.5rem;
+    display: flex;
+
+    @include respond-large {
+      display: none;
+    }
+
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &-line {
+      height: 0.12rem;
+      background-color: $secondary-color;
+      transition: transform 0.4s, background-color 0.4s, opacity 0.4s;
+    }
+
+    &.active {
+      & .header__menu-line--first {
+        background-color: $secondary-color;
+        transform: translateY(0.68rem) rotate(-45deg);
+      }
+
+      & .header__menu-line--second {
+        transform: translate(-50%);
+        opacity: 0;
+      }
+
+      & .header__menu-line--third {
+        background-color: $secondary-color;
+        transform: translateY(-0.68rem) rotate(45deg);
+      }
+    }
+  }
+
+  &__links {
+    display: none;
+
+    @include respond-large {
+      display: flex;
+    }
+
+    transform: translateY(20%);
+    transition: transform 0.5s;
+
+    &.active {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 4.8rem;
+      left: 0;
+      right: 0;
+      height: 12rem;
+      background-color: rgba(0, 0, 0, 0.9);
+      transform: translateX(0);
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-large {
+      flex-direction: row;
+      gap: 2rem;
+    }
+
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    &-item {
+      &:hover {
+        @include transform-hover;
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $secondary-color;
+      font-size: $font-size-small;
+
+      @include respond-large {
+        font-size: $font-size-large;
+      }
+
+      &:hover {
+        @include link-hover;
+      }
+    }
+  }
+}

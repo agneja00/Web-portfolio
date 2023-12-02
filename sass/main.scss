@@ -1,0 +1,215 @@
+@import "variables.scss";
+
+.main {
+  &__wrapper {
+    margin: 3rem 2rem;
+
+    @include respond-large {
+      margin: 5rem;
+    }
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  &__profile-img {
+    width: 15rem;
+
+    @include respond-large {
+      width: 24rem;
+    }
+  }
+
+  &__first-text {
+    color: $primary-color;
+  }
+
+  &__paragraph {
+    color: $primary-color;
+    text-align: justify;
+    line-height: 1.5rem;
+  }
+
+  &--row {
+    @include respond-large {
+      flex-direction: row;
+    }
+  }
+}
+
+.greeting-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  &__text {
+    color: $primary-color;
+    font-weight: 600;
+
+    @include respond-large {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+
+  @include respond-large {
+    flex-direction: row;
+  }
+
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.details-container {
+  text-align: center;
+  line-height: 2rem;
+  @include border-container-style;
+  padding: $padding-container;
+  width: 100%;
+
+  &__text {
+    color: $primary-color;
+
+    &--italic {
+      font-style: italic;
+    }
+  }
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+
+  @include respond-large {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  align-items: center;
+  gap: 2rem;
+  @include border-container-style;
+  width: 100%;
+  padding: $padding-container;
+
+  &__skill {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+
+  &__project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    @include border-container-style;
+    padding: $padding-container;
+  }
+
+  &__img {
+    height: 12.5rem;
+  }
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+
+  @include respond-large {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  @include border-container-style;
+  padding: $padding-container;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:hover {
+      @include transform-hover;
+    }
+  }
+
+  &__link {
+    color: rgb(53, 53, 53);
+    text-decoration: none;
+
+    &:hover {
+      @include link-hover;
+    }
+  }
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1.5rem;
+
+  &--margin {
+    margin-top: 1rem;
+  }
+
+  &__button {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.9);
+    border: rgb(53, 53, 53) 0.1rem solid;
+    font-size: 80%;
+    font-weight: 600;
+    width: 8rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    text-align: center;
+
+    &:hover {
+      color: $secondary-color;
+      background-color: rgb(53, 53, 53);
+    }
+
+    &--dark {
+      color: $secondary-color;
+      background-color: rgb(53, 53, 53);
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+    }
+  }
+}
+
+.icon {
+  width: 3rem;
+
+  &--hover {
+    &:hover {
+      @include transform-hover;
+    }
+  }
+}

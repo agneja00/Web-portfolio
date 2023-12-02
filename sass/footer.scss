@@ -1,0 +1,43 @@
+@import "variables.scss";
+
+.footer {
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-large {
+      flex-direction: row;
+    }
+
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    &-item {
+      &:hover {
+        @include transform-hover;
+      }
+    }
+
+    &-link {
+      color: rgba(0, 0, 0, 0.9);
+      text-decoration: none;
+      font-size: $font-size-small;
+
+      @include respond-large {
+        font-size: $font-size-large;
+      }
+
+      &:hover {
+        @include link-hover;
+      }
+    }
+  }
+
+  &__paragraph {
+    text-align: center;
+    color: $primary-color;
+    margin: 2rem;
+  }
+}

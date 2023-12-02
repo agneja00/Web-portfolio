@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Portfolio</title>
+  <link rel="icon" href="/assets/images/app_icon.png">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__wrapper">
+      <h1 class="header__greeting">Hello World!</h1>
+      <div class="header__menu">
+        <span class="header__menu-line header__menu-line--first"></span>
+        <span class="header__menu-line header__menu-line--second"></span>
+        <span class="header__menu-line header__menu-line--third"></span>
+      </div>
+      <nav class="header__links">
+        <ul class="header__list">
+          <li class="header__list-item"><a class="header__list-link" href="#about">About</a></li>
+          <li class="header__list-item"><a class="header__list-link" href="#skills">Skills</a></li>
+          <li class="header__list-item"><a class="header__list-link" href="#projects">Projects</a></li>
+          <li class="header__list-item"><a class="header__list-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="main__wrapper">
+      <section class="section section--row">
+        <img class="section__profile-img" src="/assets/images/profile_img.png" alt="Profile picture">
+
+        <article class="greeting-container">
+          <p class="greeting-container__text">Hello, I'm</p>
+          <h2 class="greeting-container__title">Agnieska Jackevic</h2>
+          <p class="greeting-container__text">Junior Frontend Developer</p>
+          <p class="greeting-container__text">Let's get acquainted!</p>
+
+          <div class="buttons-container buttons-container--margin">
+            <a class="buttons-container__button" href="https://resume.io/r/kdYWqREJJ" target="_blank">
+              Show CV</a>
+            <a class="buttons-container__button buttons-container__button--dark" href="#contact">
+              Contact Info</a>
+          </div>
+          <div class="buttons-container buttons-container--margin">
+            <a href="https://www.linkedin.com/in/agnieska-jackevic-948830222/" target="_blank">
+              <img class="icon icon--hover" src="/assets/logo/linkedin.png" alt="My LinkedIn profile">
+            </a>
+            <a href="https://github.com/agneja00" target="_blank">
+              <img class="icon icon--hover" src="/assets/logo/github.png" alt="My Github profile">
+            </a>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <div class="main__wrapper">
+      <section class="section" id="about">
+        <p class="section__first-text">Get To Know More</p>
+        <h2 class="section__title">About Me</h2>
+        <div class="about-container">
+          <section class="details-container">
+            <img class="icon" src="https://icons.veryicon.com/png/o/miscellaneous/zr_icon/work-experience-2.png"
+              alt="Experience icon">
+            <h3 class="details-container__title">Experience</h3>
+            <p class="details-container__text">2 years</p>
+            <p class="details-container__text">Customer Support Specialist</p>
+            <p class="details-container__text details-container__text--italic">Pigu.lt, Worldline Lietuva</p>
+          </section>
+
+          <section class="details-container">
+            <img class="icon" src="https://icons.veryicon.com/png/o/miscellaneous/life-class/education-18.png"
+              alt="Education icon">
+            <h3 class="details-container__title">Education</h3>
+            <p class="details-container__text">480h</p>
+            <p class="details-container__text">Junior Frontend Specialist</p>
+            <p class="details-container__text details-container__text--italic">CodeAcademy</p>
+          </section>
+        </div>
+        <p class="section__paragraph">
+          I've recently graduated from a programming course, so I'm at a new stage in life, which I'm very excited
+          about.
+          As a junior developer I am inquisitive and a quick learner. I like challenges and finding solutions. My
+          motivation and energy have no limits, there is always something to strive for. I am also very friendly, so I
+          find it easy to talk to people, which helps a lot at work, especially in a team. In my spare time I learn
+          new things and each time I update old projects with new knowledge, which helps to see my progress.
+        </p>
+      </section>
+    </div>
+
+    <div class="main__wrapper">
+      <section class="section" id="skills">
+        <p class="section__first-text">Explore My</p>
+        <h2 class="section__title">Skills & Tools</h2>
+        <div class="skills-container">
+          <article class="skills-container__skill">
+            <img class="icon" src="/assets/logo/html.png" alt="HTML icon">
+            <h3>HTML</h3>
+          </article>
+
+          <article class="skills-container__skill">
+            <img class="icon" src="/assets/logo/css.png" alt="CSS icon">
+            <h3>CSS</h3>
+          </article>
+
+          <article class="skills-container__skill">
+            <img class="icon" src="/assets/logo/js.png" alt="JavaScript icon">
+            <h3>JavaScript</h3>
+          </article>
+
+          <article class="skills-container__skill">
+            <img class="icon" src="/assets/logo/react.png" alt="React icon">
+            <h3>React JS</h3>
+          </article>
+
+          <article class="skills-container__skill">
+            <img class="icon" src="/assets/logo/node_js.png" alt="Node icon">
+            <h3>Node JS</h3>
+          </article>
+
+          <article class="skills-container__skill">
+            <img class="icon" src="/assets/logo/github.png" alt="Github icon">
+            <h3>Github</h3>
+          </article>
+
+          <article class="skills-container__skill">
+            <img class="icon" src="/assets/logo/api.png" alt="APIs icon">
+            <h3>RESTful APIs</h3>
+          </article>
+
+          <article class="skills-container__skill">
+            <img class="icon" src="/assets/logo/vercel.svg" alt="Firebase icon">
+            <h3>Vercel</h3>
+          </article>
+
+          <article class="skills-container__skill">
+            <img class="icon" src="/assets/logo/sass.png" alt="SASS icon">
+            <h3>SASS</h3>
+          </article>
+
+          <article class="skills-container__skill">
+            <img class="icon" src="/assets/logo/material_ui.png" alt="Material UI icon">
+            <h3>Material UI</h3>
+          </article>
+
+          <article class="skills-container__skill">
+            <img class="icon" src="/assets/logo/responsive_design.png" alt="Responsive design icon">
+            <h3>Responsive Websites</h3>
+          </article>
+
+          <article class="skills-container__skill">
+            <img class="icon" src="/assets/logo/bootstrap.svg" alt="Bootstrap icon">
+            <h3>Bootstrap</h3>
+          </article>
+
+          <article class="skills-container__skill">
+            <img class="icon" src="/assets/logo/bem.svg" alt="BEM icon">
+            <h3>BEM metchodology</h3>
+          </article>
+
+          <article class="skills-container__skill">
+            <img class="icon" src="/assets/logo/express_js.png" alt="Express icon">
+            <h3>Express JS</h3>
+          </article>
+
+          <article class="skills-container__skill">
+            <img class="icon" src="/assets/logo/vs.png" alt="VS Code icon">
+            <h3>VS Code</h3>
+          </article>
+
+          <article class="skills-container__skill">
+            <img class="icon" src="/assets/logo/webpack.png" alt="Webpack icon">
+            <h3>Webpack</h3>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <div class="main__wrapper">
+      <section class="section" id="projects">
+        <p class="section__first-text">Browse My Recent</p>
+        <h2 class="section__title">Projects</h2>
+        <div class="projects-container">
+          <article class="projects-container__project">
+            <img class="projects-container__img" src="/assets/images/weather_app.png" alt="Project Weather App">
+            <h2 class="projects-container__project-title">Weather App</h2>
+            <div class="buttons-container buttons-container--margin">
+              <a class="buttons-container__button" href="https://github.com/agneja00/WeatherApp"
+                target="_blank">Github</a>
+              <a class="buttons-container__button" href="https://weather-app-rho-blond.vercel.app/" target="_blank">Live
+                Demo</a>
+            </div>
+          </article>
+
+          <article class="projects-container__project">
+            <img class="projects-container__img" src="/assets/images/grocery_list.png" alt="Project Grocery List App">
+            <h2 class="projects-container__project-title">Grocery List</h2>
+            <div class="buttons-container buttons-container--margin">
+              <a class="buttons-container__button" href="https://github.com/agneja00/Grocery-List"
+                target="_blank">Github</a>
+              <a class="buttons-container__button" href="https://grocery-list-beryl.vercel.app/" target="_blank">Live
+                Demo</a>
+            </div>
+          </article>
+
+          <article class="projects-container__project">
+            <img class="projects-container__img" src="/assets/images/dragon_killer.png"
+              alt="Project Dragon Killer Game">
+            <h2 class="projects-container__project-title">Dragon Killer</h2>
+            <div class="buttons-container buttons-container--margin">
+              <a class="buttons-container__button" href="https://github.com/agneja00/Dragon-Knight-Game"
+                target="_blank">Github</a>
+              <a class="buttons-container__button" href="https://dragon-knight-game.vercel.app/" target="_blank">Live
+                Demo</a>
+            </div>
+          </article>
+
+          <article class="projects-container__project">
+            <img class="projects-container__img" src="/assets/images/netflix_app.avif" alt="Project Netflix clone">
+            <h2 class="projects-container__project-title">Netflix clone</h2>
+            <div class="buttons-container buttons-container--margin">
+              <a class="buttons-container__button" href="https://github.com/agneja00/Netflix-clone"
+                target="_blank">Github</a>
+              <a class="buttons-container__button" href="https://netflix-clone-murex-eight-79.vercel.app/"
+                target="_blank">Live Demo</a>
+            </div>
+          </article>
+
+          <article class="projects-container__project">
+            <img class="projects-container__img" src="/assets/images/web_portfolio.png" alt="Project Weather App">
+            <h2 class="projects-container__project-title">Portfolio</h2>
+            <div class="buttons-container buttons-container--margin">
+              <a class="buttons-container__button" href="https://github.com/agneja00/Web-Portfolio"
+                target="_blank">Github</a>
+              <a class="buttons-container__button" href="https://web-portfolio-beryl-pi.vercel.app/">Live
+                Demo</a>
+            </div>
+          </article>
+
+          <article class="projects-container__project">
+            <img class="projects-container__img" src="/assets/images/coming_soon.png" alt="Project Art Gallery">
+            <h2 class="projects-container__project-title">Art Gallery</h2>
+            <div class="buttons-container buttons-container--margin">
+              <a class="buttons-container__button" href="https://github.com/agneja00/Art-Gallery-REACT"
+                target="_blank">Github</a>
+              <a class="buttons-container__button" href="/">Live Demo</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <div class="main__wrapper">
+      <section class="section" id="contact">
+        <p class="section__first-text">Get in Touch</p>
+        <h2 class="section__title">Contact Me</h2>
+        <div class="contact-container">
+          <div class="contact-container__item">
+            <img class="icon" src="/assets/images/mail.png" alt="Email icon">
+            <a class="contact-container__link" href="mailto:agnieshaa00@gmail.com">agnieshaa00@gmail.com</a>
+          </div>
+          <div class="contact-container__item">
+            <img class="icon" src="/assets/images/phone.avif" alt="Phone icon">
+            <a class="contact-container__link" href="tel:+37064707135">+37064707135</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer__links">
+      <ul class="footer__list">
+        <li class="footer__list-item"><a class="footer__list-link" href="#about">About</a></li>
+        <li class="footer__list-item"><a class="footer__list-link" href="#skills">Skills</a></li>
+        <li class="footer__list-item"><a class="footer__list-link" href="#projects">Projects</a></li>
+        <li class="footer__list-item"><a class="footer__list-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p class="footer__paragraph">Copyright &#169; 2023 Agnieska Jackevic. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>
