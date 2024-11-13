@@ -78,15 +78,22 @@
   line-height: 2rem;
   @include border-container-style;
   padding: $padding-container;
-  width: 100%;
+  width: 50%;
 
   &__text {
     color: $primary-color;
 
     &--italic {
       font-style: italic;
+      font-weight: 900;
+      font-size: 0.9rem;
+      color: rgb(0, 0, 0);
     }
   }
+}
+
+.info__container {
+  margin: 0.5rem;
 }
 
 .skills-container {
@@ -211,5 +218,15 @@
     &:hover {
       @include transform-hover;
     }
+  }
+}
+
+@include respond-large {
+  .info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
   }
 }

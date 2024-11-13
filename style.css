@@ -200,13 +200,20 @@ html {
   border: rgb(163, 163, 163) 0.1rem solid;
   border-radius: 2rem;
   padding: 1.5rem;
-  width: 100%;
+  width: 50%;
 }
 .details-container__text {
   color: rgb(85, 85, 85);
 }
 .details-container__text--italic {
   font-style: italic;
+  font-weight: 900;
+  font-size: 0.9rem;
+  color: rgb(0, 0, 0);
+}
+
+.info__container {
+  margin: 0.5rem;
 }
 
 .skills-container {
@@ -325,6 +332,15 @@ html {
   transition: 0.3s;
 }
 
+@media only screen and (min-width: 768px) {
+  .info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+}
 .footer__list {
   list-style: none;
   display: flex;
