@@ -205,8 +205,7 @@ html {
 .details-container__text {
   color: rgb(85, 85, 85);
 }
-.details-container__text--italic {
-  font-style: italic;
+.details-container__text--bold {
   font-weight: 900;
   font-size: 0.9rem;
   color: rgb(0, 0, 0);
