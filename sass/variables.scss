@@ -12,7 +12,6 @@ $padding-container: 1.5rem;
 
 @mixin link-hover {
   color: $tertiary-color;
-  text-decoration: underline;
 }
 
 @mixin border-container-style {

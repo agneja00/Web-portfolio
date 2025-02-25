@@ -122,7 +122,6 @@ html {
 }
 .header__list-link:hover {
   color: rgb(163, 163, 163);
-  text-decoration: underline;
 }
 
 .main__wrapper {
@@ -290,7 +289,6 @@ html {
 }
 .contact-container__link:hover {
   color: rgb(163, 163, 163);
-  text-decoration: underline;
 }
 
 .buttons-container {
@@ -369,7 +367,6 @@ html {
 }
 .footer__list-link:hover {
   color: rgb(163, 163, 163);
-  text-decoration: underline;
 }
 .footer__paragraph {
   text-align: center;
