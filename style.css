@@ -253,9 +253,12 @@ html {
   border: rgb(163, 163, 163) 0.1rem solid;
   border-radius: 2rem;
   padding: 1.5rem;
+  max-width: 100%;
 }
 .projects-container__img {
   height: 12.5rem;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .contact-container {
