@@ -29,3 +29,6 @@ Welcome to my personal simple web portfolio! This is a responsive website that s
 
 - Website - [Agnieska Jackevic] (https://web-portfolio-agneja00.vercel.app/)
 - Linkedin - [Agnieska Jackevic] (https://www.linkedin.com/in/agnieska-jackevic-948830222/)
+
+![Screenshot](./assets/images/web_portfolio.png)
+![Screenshot](./assets/images/web_portfolio_mobile.png)
