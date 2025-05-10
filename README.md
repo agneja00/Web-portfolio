@@ -24,6 +24,7 @@ Welcome to my personal simple web portfolio! This is a responsive website that s
 - BEM Methodology: Ensure that each part of the code has a clear, consistent and descriptive name.
 - Responsive Design: Works on all device sizes.
 - CSS Animations: For engaging user experience.
+- Vercel: deployment platform for fast, global hosting and automatic CI/CD integration.
 
 ## Author
 
