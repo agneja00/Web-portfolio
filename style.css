@@ -199,7 +199,8 @@ html {
   border: rgb(163, 163, 163) 0.1rem solid;
   border-radius: 2rem;
   padding: 1.5rem;
-  width: 50%;
+  width: 20rem;
+  height: 22rem;
 }
 .details-container__text {
   color: rgb(85, 85, 85);
@@ -338,6 +339,10 @@ html {
     align-items: center;
     justify-content: center;
     gap: 3rem;
+  }
+  .details-container {
+    width: 100%;
+    height: auto;
   }
 }
 .footer__list {

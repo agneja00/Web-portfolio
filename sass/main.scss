@@ -78,7 +78,8 @@
   line-height: 2rem;
   @include border-container-style;
   padding: $padding-container;
-  width: 50%;
+  width: 20rem;
+  height: 22rem;
 
   &__text {
     color: $primary-color;
@@ -229,5 +230,10 @@
     align-items: center;
     justify-content: center;
     gap: 3rem;
+  }
+
+  .details-container {
+    width: 100%;
+    height: auto;
   }
 }
