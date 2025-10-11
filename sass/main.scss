@@ -104,6 +104,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 3rem;
+    gap: 2.3rem;
   }
 
   align-items: center;
@@ -117,6 +119,11 @@
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
+    width: 8.5rem;
+
+    @include respond-large {
+      width: 10rem;
+    }
   }
 }
 

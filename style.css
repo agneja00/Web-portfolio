@@ -230,6 +230,8 @@ html {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 3rem;
+    gap: 2.3rem;
   }
 }
 .skills-container__skill {
@@ -237,6 +239,12 @@ html {
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
+  width: 8.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .skills-container__skill {
+    width: 10rem;
+  }
 }
 
 .projects-container {
