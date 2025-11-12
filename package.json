@@ -1,0 +1,31 @@
+{
+  "name": "web-portfolio",
+  "version": "1.0.0",
+  "description": "Welcome to my personal simple web portfolio! This is a responsive website that showcases my professional profile, including my background, education, work experience, skills, projects, and contact information. This portfolio serves as an interactive introduction to who I am and what I can do.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agneja00/Web-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agneja00/Web-portfolio/issues"
+  },
+  "homepage": "https://github.com/agneja00/Web-portfolio#readme",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.4",
+    "sass": "^1.94.0",
+    "sass-loader": "^16.0.6",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1"
+  }
+}
