@@ -126,11 +126,16 @@ html {
 }
 
 .main__wrapper {
-  margin: 3rem 2rem;
+  margin: 3rem 2.5rem;
+}
+@media only screen and (min-width: 510px) {
+  .main__wrapper {
+    margin: 2.5rem 4rem;
+  }
 }
 @media only screen and (min-width: 768px) {
   .main__wrapper {
-    margin: 5rem;
+    margin: 3rem 5rem;
   }
 }
 
@@ -144,6 +149,11 @@ html {
 .section__profile-img {
   width: 15rem;
 }
+@media only screen and (min-width: 510px) {
+  .section__profile-img {
+    width: 22rem;
+  }
+}
 @media only screen and (min-width: 768px) {
   .section__profile-img {
     width: 24rem;
@@ -156,6 +166,11 @@ html {
   color: rgb(85, 85, 85);
   text-align: justify;
   line-height: 1.5rem;
+}
+@media only screen and (min-width: 1200px) {
+  .section__paragraph {
+    font-size: 1.05rem;
+  }
 }
 @media only screen and (min-width: 768px) {
   .section--row {
@@ -203,6 +218,23 @@ html {
   width: 20rem;
   height: 22rem;
 }
+@media only screen and (min-width: 510px) {
+  .details-container {
+    height: 22rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .details-container {
+    width: 100%;
+    height: 24rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .details-container {
+    height: 18rem;
+    padding: 2rem;
+  }
+}
 .details-container__text {
   color: rgb(85, 85, 85);
 }
@@ -226,12 +258,18 @@ html {
   width: 100%;
   padding: 1.5rem;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 510px) {
   .skills-container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 3rem;
+    padding: 2rem;
+    gap: 1.2rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .skills-container {
+    padding: 2.5rem;
     gap: 2.3rem;
   }
 }
@@ -242,9 +280,15 @@ html {
   gap: 0.5rem;
   width: 8.5rem;
 }
+@media only screen and (min-width: 510px) {
+  .skills-container__skill {
+    font-size: 0.8rem;
+  }
+}
 @media only screen and (min-width: 768px) {
   .skills-container__skill {
     width: 10rem;
+    font-size: 1rem;
   }
 }
 
@@ -278,12 +322,18 @@ html {
   gap: 1rem;
   border: rgb(163, 163, 163) 0.1rem solid;
   border-radius: 2rem;
-  padding: 1.5rem;
+  padding: 2rem 2.5rem;
+}
+@media only screen and (min-width: 510px) {
+  .contact-container {
+    padding: 1.5rem 3rem;
+  }
 }
 @media only screen and (min-width: 768px) {
   .contact-container {
     flex-direction: row;
     gap: 2rem;
+    padding: 1.5rem;
   }
 }
 .contact-container__item {
@@ -336,6 +386,16 @@ html {
 .icon {
   width: 3rem;
 }
+@media only screen and (min-width: 510px) {
+  .icon {
+    width: 2rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .icon {
+    width: 3rem;
+  }
+}
 .icon--hover:hover {
   transform: scale(1.1);
   transition: 0.3s;
@@ -349,10 +409,6 @@ html {
     justify-content: center;
     gap: 3rem;
   }
-  .details-container {
-    width: 100%;
-    height: 20.5rem;
-  }
 }
 .footer__list {
   list-style: none;
@@ -362,7 +418,7 @@ html {
   justify-content: center;
   gap: 1.5rem;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 510px) {
   .footer__list {
     flex-direction: row;
   }
