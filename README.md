@@ -24,6 +24,8 @@ Welcome to my personal simple web portfolio! This is a responsive website that s
 - **BEM Methodology**: Ensure that each part of the code has a clear, consistent and descriptive name.
 - **Responsive Design**: Works on all device sizes.
 - **CSS Animations**: For engaging user experience.
+- **Webpack**: Bundle for JS, SCSS and static assets.
+- **html-loader**: Parses HTML and resolves asset paths during build.
 - **Vercel**: deployment platform for fast, global hosting and automatic CI/CD integration.
 
 ## Author
@@ -31,5 +33,5 @@ Welcome to my personal simple web portfolio! This is a responsive website that s
 - Website - [Agnieska Jackevic] (https://web-portfolio-agneja00.vercel.app/)
 - Linkedin - [Agnieska Jackevic] (https://www.linkedin.com/in/agnieska-jackevic/)
 
-![Screenshot](./assets/images/web_portfolio.png)
-![Screenshot](./assets/images/web_portfolio_mobile.png)
+![Screenshot](/src/assets/images/web_portfolio.png)
+![Screenshot](/src/assets/images/web_portfolio_mobile.png)
