@@ -1,3 +1,5 @@
+import "./sass/style.scss";
+
 let menuBtn = document.querySelector(".header__menu");
 let menuLinks = document.querySelector(".header__links");
 

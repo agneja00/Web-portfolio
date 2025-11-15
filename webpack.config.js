@@ -1,27 +1,27 @@
-const HtmlPlugin = require('html-webpack-plugin');
+const HtmlPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: 'production',
-  entry: './src/script.js',
+  mode: "production",
+  entry: "./src/main.js",
   output: {
-    filename: 'bundle.js',
-    clean: true
+    filename: "main.js",
+    clean: true,
   },
   module: {
     rules: [
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.html$/,
-        loader: 'html-loader'
-      }
-    ]
+        loader: "html-loader",
+      },
+    ],
   },
   plugins: [
     new HtmlPlugin({
-      template: './src/index.html'
-    })
-  ]
+      template: "./src/index.html",
+    }),
+  ],
 };
