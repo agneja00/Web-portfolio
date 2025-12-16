@@ -126,16 +126,16 @@ html {
 }
 
 .main__wrapper {
-  margin: 3rem 2.5rem;
+  padding: 3rem 2.5rem;
 }
 @media only screen and (min-width: 510px) {
   .main__wrapper {
-    margin: 2.5rem 4rem;
+    padding: 2.5rem 4rem;
   }
 }
 @media only screen and (min-width: 768px) {
   .main__wrapper {
-    margin: 3rem 5rem;
+    padding: 3rem 5rem;
   }
 }
 
@@ -443,7 +443,7 @@ html {
 .footer__paragraph {
   text-align: center;
   color: rgb(85, 85, 85);
-  margin: 2rem;
+  padding: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

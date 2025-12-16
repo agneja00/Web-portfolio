@@ -2,14 +2,14 @@
 
 .main {
   &__wrapper {
-    margin: 3rem 2.5rem;
+    padding: 3rem 2.5rem;
 
     @include respond-medium {
-      margin: 2.5rem 4rem;
+      padding: 2.5rem 4rem;
     }
 
     @include respond-large {
-      margin: 3rem 5rem;
+      padding: 3rem 5rem;
     }
   }
 }
