@@ -2,10 +2,10 @@
 
 .main {
   &__wrapper {
-    padding: 3rem 2.5rem;
+    padding: 2rem 2.5rem;
 
     @include respond-medium {
-      padding: 2.5rem 4rem;
+      padding: 2.3rem 4rem;
     }
 
     @include respond-large {
