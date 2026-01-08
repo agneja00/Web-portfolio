@@ -25,13 +25,25 @@ $padding-container: 1.5rem;
   }
 }
 
-@mixin respond-large {
+@mixin respond-moreMedium {
   @media only screen and (min-width: 768px) {
     @content;
   }
 }
 
+@mixin respond-large {
+  @media only screen and (min-width: 800px) {
+    @content;
+  }
+}
+
 @mixin respond-moreLarge {
+  @media only screen and (min-width: 1018px) {
+    @content;
+  }
+}
+
+@mixin respond-xxlLarge {
   @media only screen and (min-width: 1200px) {
     @content;
   }
