@@ -1,16 +1,91 @@
 import "./sass/style.scss";
 
-let menuBtn = document.querySelector(".header__menu");
-let menuLinks = document.querySelector(".header__links");
+const menuBtn = document.querySelector(".header__menu");
+const menuLinks = document.querySelector(".header__links");
+const scrollRoot = document.getElementById("scroll-root");
+const spacer = document.getElementById("scroll-spacer");
 
-menuBtn.addEventListener("click", () => {
-  menuBtn.classList.toggle("active");
-  menuLinks.classList.toggle("active");
-});
+const state = {
+  current: 0,
+  target: 0,
+  maxScroll: 0,
+  ease: 0.07,
+  isMenuOpen: false,
+  isRunning: true,
+};
 
-window.addEventListener("resize", () => {
-  if (window.innerWidth >= 768) {
-    menuBtn.classList.remove("active");
-    menuLinks.classList.remove("active");
+function toggleMenu(force) {
+  state.isMenuOpen = typeof force === "boolean" ? force : !state.isMenuOpen;
+
+  menuBtn.classList.toggle("active", state.isMenuOpen);
+  menuLinks.classList.toggle("active", state.isMenuOpen);
+}
+
+menuBtn.addEventListener("click", () => toggleMenu());
+
+function updateBounds() {
+  const height = scrollRoot.scrollHeight;
+  if (spacer) {
+    spacer.style.height = height + "px";
   }
+
+  state.maxScroll = height - window.innerHeight;
+
+  state.target = Math.max(0, Math.min(state.target, state.maxScroll));
+}
+
+function onResize() {
+  if (window.innerWidth >= 768) {
+    toggleMenu(false);
+  }
+  updateBounds();
+}
+
+function onWheel(e) {
+  if (state.isMenuOpen) return;
+
+  e.preventDefault();
+
+  state.target += e.deltaY;
+  state.target = Math.max(0, Math.min(state.target, state.maxScroll));
+}
+
+function onAnchorClick(e) {
+  const link = e.currentTarget;
+  const id = link.getAttribute("href").slice(1);
+  const targetEl = document.getElementById(id);
+  if (!targetEl) return;
+
+  e.preventDefault();
+  toggleMenu(false);
+
+  const rect = targetEl.getBoundingClientRect();
+  state.target += rect.top;
+}
+
+function loop() {
+  if (!state.isRunning) return;
+
+  state.current += (state.target - state.current) * state.ease;
+
+  if (Math.abs(state.target - state.current) < 0.1) {
+    state.current = state.target;
+  }
+
+  scrollRoot.style.transform = `translate3d(0, ${-state.current}px, 0)`;
+
+  requestAnimationFrame(loop);
+}
+
+window.addEventListener("resize", onResize);
+
+window.addEventListener("wheel", onWheel, {
+  passive: false,
 });
+
+document
+  .querySelectorAll('a[href^="#"]')
+  .forEach((link) => link.addEventListener("click", onAnchorClick));
+
+updateBounds();
+loop();

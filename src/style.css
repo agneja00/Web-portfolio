@@ -4,13 +4,27 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
+  overflow: hidden;
 }
 
-html {
-  scroll-behavior: smooth;
+#scroll-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  will-change: transform;
+}
+
+#scroll-spacer {
+  height: 0;
 }
 
 .header {
