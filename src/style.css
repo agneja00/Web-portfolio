@@ -478,7 +478,7 @@ body {
 .footer__paragraph {
   text-align: center;
   color: rgb(85, 85, 85);
-  padding: 2rem;
+  padding: 2rem 2rem 1rem 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
