@@ -465,12 +465,7 @@ body {
 .footer__list-link {
   color: rgba(0, 0, 0, 0.9);
   text-decoration: none;
-  font-size: 1.3rem;
-}
-@media only screen and (min-width: 768px) {
-  .footer__list-link {
-    font-size: 1.5rem;
-  }
+  font-size: 1.2rem;
 }
 .footer__list-link:hover {
   color: rgb(163, 163, 163);

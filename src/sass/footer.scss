@@ -23,11 +23,7 @@
     &-link {
       color: rgba(0, 0, 0, 0.9);
       text-decoration: none;
-      font-size: $font-size-small;
-
-      @include respond-moreMedium {
-        font-size: $font-size-large;
-      }
+      font-size: 1.2rem;
 
       &:hover {
         @include link-hover;
