@@ -29,9 +29,10 @@ function updateBounds() {
     spacer.style.height = height + "px";
   }
 
-  state.maxScroll = height - window.innerHeight;
+  state.maxScroll = Math.max(0, height - window.innerHeight);
 
   state.target = Math.max(0, Math.min(state.target, state.maxScroll));
+  state.current = Math.max(0, Math.min(state.current, state.maxScroll));
 }
 
 function onResize() {
@@ -61,6 +62,7 @@ function onAnchorClick(e) {
 
   const rect = targetEl.getBoundingClientRect();
   state.target += rect.top;
+  state.target = Math.max(0, Math.min(state.target, state.maxScroll));
 }
 
 function loop() {
@@ -88,4 +90,15 @@ document
   .forEach((link) => link.addEventListener("click", onAnchorClick));
 
 updateBounds();
+
+window.addEventListener("load", () => {
+  updateBounds();
+});
+
+const resizeObserver = new ResizeObserver(() => {
+  updateBounds();
+});
+
+resizeObserver.observe(scrollRoot);
+
 loop();
