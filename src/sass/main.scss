@@ -23,6 +23,7 @@
 
   &__profile-img {
     width: 15rem;
+    object-fit: cover;
 
     @include respond-medium {
       width: 22rem;
@@ -194,7 +195,13 @@
   &__img {
     height: 12.5rem;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -222,6 +229,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    transition: transform 0.3s ease;
 
     &:hover {
       @include transform-hover;
@@ -231,9 +239,13 @@
   &__link {
     color: rgb(53, 53, 53);
     text-decoration: none;
+    transition: color 0.3s ease;
 
-    &:hover {
+    &:hover,
+    &:focus {
       @include link-hover;
+      outline: 2px solid $primary-color;
+      outline-offset: 2px;
     }
   }
 }
@@ -258,17 +270,29 @@
     padding: 1rem;
     border-radius: 2rem;
     text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $secondary-color;
       background-color: rgb(53, 53, 53);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      outline: 2px solid $primary-color;
+      outline-offset: 2px;
+    }
+
+    &:active {
+      transform: translateY(0);
     }
 
     &--dark {
       color: $secondary-color;
       background-color: rgb(53, 53, 53);
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: rgba(0, 0, 0, 0.9);
       }
     }
@@ -279,18 +303,31 @@
   }
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .icon {
+  display: inline-block;
+  object-fit: contain;
   width: 3rem;
+  height: 3rem;
 
   @include respond-medium {
     width: 2rem;
+    height: 2rem;
   }
 
   @include respond-moreMedium {
     width: 3rem;
+    height: 3rem;
   }
 
   &--hover {
+    transition: transform 0.3s ease;
+
     &:hover {
       @include transform-hover;
     }
