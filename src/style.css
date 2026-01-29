@@ -269,7 +269,9 @@ body {
 
 .skills-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
   border: rgb(163, 163, 163) 0.1rem solid;
@@ -280,8 +282,6 @@ body {
 @media only screen and (min-width: 510px) {
   .skills-container {
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
     padding: 2rem;
     gap: 1.2rem;
   }
@@ -294,19 +294,22 @@ body {
 }
 .skills-container__skill {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  width: 8.5rem;
+  width: 5rem;
+  text-align: center;
 }
 @media only screen and (min-width: 510px) {
   .skills-container__skill {
+    width: 7rem;
     font-size: 0.8rem;
   }
 }
 @media only screen and (min-width: 768px) {
   .skills-container__skill {
-    width: 10rem;
+    width: 8.5rem;
     font-size: 1rem;
   }
 }
@@ -445,9 +448,9 @@ img {
 
 .icon {
   display: inline-block;
+  object-fit: contain;
   width: 3rem;
   height: 3rem;
-  object-fit: contain;
 }
 @media only screen and (min-width: 510px) {
   .icon {
