@@ -1,481 +1,763 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Agnieska Jackevic, a Junior Frontend Developer showcasing modern web projects and interface design skills."
+    />
+    <meta property="og:title" content="Web Portfolio" />
+    <meta
+      property="og:description"
+      content="Portfolio of Agnieska Jackevic, a Junior Frontend Developer showcasing modern web projects and interface design skills."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://web-portfolio-7h1f-git-master-agneja00s-projects.vercel.app/"
+    />
+    <meta property="og:image" content="./assets/images/app_icon.png" />
+    <link rel="icon" href="./assets/images/app_icon.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Web Portfolio</title>
+    <script src="./script.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Portfolio of Agnieska Jackevic, a Junior Frontend Developer showcasing modern web projects and interface design skills." />
-  <meta property="og:title" content="Web Portfolio" />
-  <meta property="og:description"
-    content="Portfolio of Agnieska Jackevic, a Junior Frontend Developer showcasing modern web projects and interface design skills." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://web-portfolio-7h1f-git-master-agneja00s-projects.vercel.app/" />
-  <meta property="og:image" content="./assets/images/app_icon.png" />
-  <link rel="icon" href="./assets/images/app_icon.png" />
-  <link rel="stylesheet" href="./style.css" />
-  <title>Web Portfolio</title>
-  <script src="./script.js" defer></script>
-</head>
-
-<body>
-  <div id="scroll-root">
-    <header class="header">
-      <div class="header__container">
-        <h1 class="header__greeting">Hello World!</h1>
-        <div class="header__menu">
-          <span class="header__menu-line header__menu-line--first"></span>
-          <span class="header__menu-line header__menu-line--second"></span>
-          <span class="header__menu-line header__menu-line--third"></span>
+  <body>
+    <div id="scroll-root">
+      <header class="header">
+        <div class="header__container">
+          <h1 class="header__greeting">Hello World!</h1>
+          <div class="header__menu">
+            <span class="header__menu-line header__menu-line--first"></span>
+            <span class="header__menu-line header__menu-line--second"></span>
+            <span class="header__menu-line header__menu-line--third"></span>
+          </div>
+          <nav class="header__links">
+            <ul class="header__list">
+              <li class="header__list-item">
+                <a class="header__list-link" href="#about">About</a>
+              </li>
+              <li class="header__list-item">
+                <a class="header__list-link" href="#skills">Skills</a>
+              </li>
+              <li class="header__list-item">
+                <a class="header__list-link" href="#projects">Projects</a>
+              </li>
+              <li class="header__list-item">
+                <a class="header__list-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav class="header__links">
-          <ul class="header__list">
-            <li class="header__list-item">
-              <a class="header__list-link" href="#about">About</a>
+      </header>
+
+      <main class="main">
+        <div class="main__wrapper">
+          <section class="section section--row">
+            <img
+              class="section__profile-img"
+              src="./assets/images/profile_img.png"
+              alt="Profile picture"
+              fetchpriority="high"
+            />
+
+            <article class="greeting-container">
+              <p class="greeting-container__text">Hello, I'm</p>
+              <h2 class="greeting-container__title">Agnieska Jackevic</h2>
+              <p class="greeting-container__text">Junior Frontend Developer</p>
+              <p class="greeting-container__text">Let's get acquainted!</p>
+
+              <div class="buttons-container buttons-container--margin">
+                <a
+                  class="buttons-container__button"
+                  href="./assets/cv/Agnieska_Jackevic_CV.pdf"
+                  target="_blank"
+                  >Show CV</a
+                >
+                <a
+                  class="buttons-container__button buttons-container__button--dark"
+                  href="#contact"
+                  >Contact Info</a
+                >
+              </div>
+
+              <div class="buttons-container buttons-container--margin">
+                <a
+                  href="https://www.linkedin.com/in/agnieska-jackevic/"
+                  target="_blank"
+                >
+                  <img
+                    class="icon icon--hover"
+                    src="./assets/logo/linkedin.png"
+                    alt="My LinkedIn profile"
+                  />
+                </a>
+                <a href="https://github.com/agneja00" target="_blank">
+                  <img
+                    class="icon icon--hover"
+                    src="./assets/logo/github.png"
+                    alt="My Github profile"
+                  />
+                </a>
+              </div>
+            </article>
+          </section>
+        </div>
+
+        <div class="main__wrapper">
+          <section class="section" id="about">
+            <p class="section__first-text">Get To Know More</p>
+            <h2 class="section__title">About Me</h2>
+            <div class="about-container">
+              <section class="details-container">
+                <img
+                  class="icon"
+                  src="https://icons.veryicon.com/png/o/miscellaneous/zr_icon/work-experience-2.png"
+                  alt="Experience icon"
+                />
+                <h3 class="details-container__title">Experience</h3>
+                <div class="info__container">
+                  <p class="details-container__text">6 years</p>
+                  <p class="details-container__text">
+                    Waiter, Consultant, Customer Support Specialist, Contact
+                    Center Agent, Assistant Sales Manager
+                  </p>
+                  <p
+                    class="details-container__text details-container__text--bold"
+                  >
+                    Belmontas, Sportland, Pigu.lt, Worldline Lietuva, OlyBet
+                    Group
+                  </p>
+                </div>
+              </section>
+
+              <section class="details-container">
+                <img
+                  class="icon"
+                  src="https://icons.veryicon.com/png/o/miscellaneous/life-class/education-18.png"
+                  alt="Education icon"
+                />
+                <h3 class="details-container__title">Education</h3>
+                <div class="info">
+                  <div class="info__container">
+                    <p class="details-container__text">480h</p>
+                    <p class="details-container__text">
+                      Junior Frontend Specialist
+                    </p>
+                    <p
+                      class="details-container__text details-container__text--bold"
+                    >
+                      CodeAcademy
+                    </p>
+                  </div>
+                  <div class="info-container">
+                    <p class="details-container__text">104h</p>
+                    <p class="details-container__text">
+                      Frontend Career Accelerator
+                    </p>
+                    <p
+                      class="details-container__text details-container__text--bold"
+                    >
+                      IamJunior
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <p class="section__paragraph">
+              After graduating from a programming course, I’m excited to begin
+              my journey as a junior developer. I'm passionate about taking on
+              new challenges, always looking for innovative ways to solve
+              problems and improve my skills. Known for my curiosity and
+              quick-learning mindset, I’m constantly seeking out opportunities
+              to grow. Beyond my technical side, I value connection and
+              teamwork. My friendly nature makes it easy to communicate and
+              collaborate effectively, adding to a positive and productive work
+              environment. In my free time, I enjoy refining my projects with
+              new skills I’ve learned, giving me a clear sense of my progress as
+              I advance in the field.
+            </p>
+          </section>
+        </div>
+
+        <div class="main__wrapper">
+          <section class="section" id="skills">
+            <p class="section__first-text">Explore My</p>
+            <h2 class="section__title">Skills & Tools</h2>
+
+            <div class="skills-container">
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/html.png"
+                  alt="HTML icon"
+                />
+                <h3>HTML</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img class="icon" src="./assets/logo/css.png" alt="CSS icon" />
+                <h3>CSS</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/sass.png"
+                  alt="SASS icon"
+                />
+                <h3>SASS</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/bootstrap.svg"
+                  alt="Bootstrap icon"
+                />
+                <h3>Bootstrap</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/js.png"
+                  alt="JavaScript icon"
+                />
+                <h3>JavaScript</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/node_js.png"
+                  alt="Node icon"
+                />
+                <h3>Node JS</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/express_js.png"
+                  alt="Express icon"
+                />
+                <h3>Express JS</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/yarn.png"
+                  alt="Yarn icon"
+                />
+                <h3>Yarn</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/pnpm.png"
+                  alt="Pnpm icon"
+                />
+                <h3>Pnpm</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/react.png"
+                  alt="React icon"
+                />
+                <h3>React JS</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/typescript.png"
+                  alt="TypeScript icon"
+                />
+                <h3>TypeScript</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/reaact-test.png"
+                  alt="React Testing Library icon"
+                />
+                <h3>React Testing Library</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/jest.png"
+                  alt="Jest icon"
+                />
+                <h3>Jest</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/react-query.png"
+                  alt="react-query icon"
+                />
+                <h3>React Query</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/reacthookform.png"
+                  alt="React-hook-form icon"
+                />
+                <h3>React Hook Form</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/formik.webp"
+                  alt="Formik icon"
+                />
+                <h3>Formik</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img class="icon" src="./assets/logo/zod.webp" alt="Zod icon" />
+                <h3>Zod</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/material_ui.png"
+                  alt="Material UI icon"
+                />
+                <h3>Material UI</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/mongodb.png"
+                  alt="MongoDB icon"
+                />
+                <h3>MongoDB</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/postgreSQL.png"
+                  alt="PostgreSQL icon"
+                />
+                <h3>PostgreSQL</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/prisma.png"
+                  alt="Prisma icon"
+                />
+                <h3>Prisma</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/trpc.webp"
+                  alt="tRPC icon"
+                />
+                <h3>tRPC</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img class="icon" src="./assets/logo/api.png" alt="APIs icon" />
+                <h3>RESTful APIs</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/responsive_design.png"
+                  alt="Responsive design icon"
+                />
+                <h3>Responsive Websites</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img class="icon" src="./assets/logo/bem.svg" alt="BEM icon" />
+                <h3>BEM metchodology</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/github.png"
+                  alt="Github icon"
+                />
+                <h3>Github</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/vs.png"
+                  alt="VS Code icon"
+                />
+                <h3>VS Code</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/webpack.png"
+                  alt="Webpack icon"
+                />
+                <h3>Webpack</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/vercel.svg"
+                  alt="Vercel icon"
+                />
+                <h3>Vercel</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/heroku.png"
+                  alt="Heroku icon"
+                />
+                <h3>Heroku</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/eslint.svg"
+                  alt="ESLint icon"
+                />
+                <h3>ESLint</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/prettier.png"
+                  alt="Prettier icon"
+                />
+                <h3>Prettier</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/docker.png"
+                  alt="Docker icon"
+                />
+                <h3>Docker</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/cloudinary.png"
+                  alt="Cloudinary icon"
+                />
+                <h3>Cloudinary</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img class="icon" src="./assets/logo/aws.png" alt="AWS icon" />
+                <h3>AWS</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/sendgrid.png"
+                  alt="SendGrid icon"
+                />
+                <h3>SendGrid</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/sentry.webp"
+                  alt="Sentry icon"
+                />
+                <h3>Sentry</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/mixpanel.png"
+                  alt="Mixpanel icon"
+                />
+                <h3>Mixpanel</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/datadog.svg"
+                  alt="Datadog icon"
+                />
+                <h3>Datadog</h3>
+              </article>
+
+              <article class="skills-container__skill">
+                <img
+                  class="icon"
+                  src="./assets/logo/figma.png"
+                  alt="Figma icon"
+                />
+                <h3>Figma</h3>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <div class="main__wrapper">
+          <section class="section" id="projects">
+            <p class="section__first-text">Browse My Recent</p>
+            <h2 class="section__title">Projects</h2>
+
+            <div class="projects-container">
+              <article class="projects-container__project">
+                <img
+                  class="projects-container__img"
+                  src="./assets/images/weatherapp.png"
+                  alt="Project Weather App"
+                />
+                <h2 class="projects-container__project-title">Weather App</h2>
+                <div class="buttons-container buttons-container--margin">
+                  <a
+                    class="buttons-container__button buttons-container__button--project"
+                    href="https://github.com/agneja00/WeatherApp"
+                    target="_blank"
+                    >Github</a
+                  >
+                  <a
+                    class="buttons-container__button buttons-container__button--project"
+                    href="https://weather-app-rho-blond.vercel.app/"
+                    target="_blank"
+                    >Live Demo</a
+                  >
+                </div>
+              </article>
+
+              <article class="projects-container__project">
+                <img
+                  class="projects-container__img"
+                  src="./assets/images/grocery_list.png"
+                  alt="Project Grocery List App"
+                />
+                <h2 class="projects-container__project-title">Grocery List</h2>
+                <div class="buttons-container buttons-container--margin">
+                  <a
+                    class="buttons-container__button buttons-container__button--project"
+                    href="https://github.com/agneja00/Grocery-List"
+                    target="_blank"
+                    >Github</a
+                  >
+                  <a
+                    class="buttons-container__button buttons-container__button--project"
+                    href="https://grocery-list-beryl.vercel.app/"
+                    target="_blank"
+                    >Live Demo</a
+                  >
+                </div>
+              </article>
+
+              <article class="projects-container__project">
+                <img
+                  class="projects-container__img"
+                  src="./assets/images/dragon_killer.png"
+                  alt="Project Dragon Killer Game"
+                />
+                <h2 class="projects-container__project-title">Dragon Killer</h2>
+                <div class="buttons-container buttons-container--margin">
+                  <a
+                    class="buttons-container__button buttons-container__button--project"
+                    href="https://github.com/agneja00/Dragon-Knight-Game"
+                    target="_blank"
+                    >Github</a
+                  >
+                  <a
+                    class="buttons-container__button buttons-container__button--project"
+                    href="https://dragon-knight-game.vercel.app/"
+                    target="_blank"
+                    >Live Demo</a
+                  >
+                </div>
+              </article>
+
+              <article class="projects-container__project">
+                <img
+                  class="projects-container__img"
+                  src="./assets/images/netflix_app.png"
+                  alt="Project Netflix clone"
+                />
+                <h2 class="projects-container__project-title">Netflix clone</h2>
+                <div class="buttons-container buttons-container--margin">
+                  <a
+                    class="buttons-container__button buttons-container__button--project"
+                    href="https://github.com/agneja00/Netflix-clone"
+                    target="_blank"
+                    >Github</a
+                  >
+                  <a
+                    class="buttons-container__button buttons-container__button--project"
+                    href="https://netflix-clone-app-mauve-two.vercel.app/"
+                    target="_blank"
+                    >Live Demo</a
+                  >
+                </div>
+              </article>
+
+              <article class="projects-container__project">
+                <img
+                  class="projects-container__img"
+                  src="./assets/images/home_service.png"
+                  alt="Home Service"
+                />
+                <h2 class="projects-container__project-title">Home Service</h2>
+                <div class="buttons-container buttons-container--margin">
+                  <a
+                    class="buttons-container__button buttons-container__button--project"
+                    href="https://github.com/agneja00/FEAC"
+                    target="_blank"
+                    >Github</a
+                  >
+                  <a
+                    class="buttons-container__button buttons-container__button--project"
+                    href="https://home-services-f898b008a33e.herokuapp.com/"
+                    target="_blank"
+                    >Live Demo</a
+                  >
+                </div>
+              </article>
+
+              <article class="projects-container__project">
+                <img
+                  class="projects-container__img"
+                  src="./assets/images/web_portfolio.png"
+                  alt="Project Web Portfolio"
+                />
+                <h2 class="projects-container__project-title">Portfolio</h2>
+                <div class="buttons-container buttons-container--margin">
+                  <a
+                    class="buttons-container__button buttons-container__button--project"
+                    href="https://github.com/agneja00/Web-Portfolio"
+                    target="_blank"
+                    >Github</a
+                  >
+                  <a
+                    class="buttons-container__button buttons-container__button--project"
+                    href="/"
+                    >Live Demo</a
+                  >
+                </div>
+              </article>
+
+              <article class="projects-container__project">
+                <img
+                  class="projects-container__img"
+                  src="./assets/images/Idea_space.png"
+                  alt="Project Idea Space"
+                />
+                <h2 class="projects-container__project-title">Idea Space</h2>
+                <div class="buttons-container buttons-container--margin">
+                  <a
+                    class="buttons-container__button buttons-container__button--project"
+                    href="https://github.com/agneja00/Idea_Space"
+                    target="_blank"
+                    >Github</a
+                  >
+                  <a
+                    class="buttons-container__button buttons-container__button--project"
+                    href="https://ideaspace-4fcd43ee8a12.herokuapp.com/"
+                    target="_blank"
+                    >Live Demo</a
+                  >
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <div class="main__wrapper">
+          <section class="section" id="contact">
+            <p class="section__first-text">Get in Touch</p>
+            <h2 class="section__title">Contact Me</h2>
+
+            <div class="contact-container">
+              <div class="contact-container__item">
+                <img
+                  class="icon"
+                  src="./assets/images/mail.png"
+                  alt="Email icon"
+                />
+                <a
+                  class="contact-container__link"
+                  href="mailto:agnieshaa00@gmail.com"
+                  >agnieshaa00@gmail.com</a
+                >
+              </div>
+
+              <div class="contact-container__item">
+                <img
+                  class="icon"
+                  src="./assets/images/phone.avif"
+                  alt="Phone icon"
+                />
+                <a class="contact-container__link" href="tel:+37064707135"
+                  >+37064707135</a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <nav class="footer__links">
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <a class="footer__list-link" href="#about">About</a>
             </li>
-            <li class="header__list-item">
-              <a class="header__list-link" href="#skills">Skills</a>
+            <li class="footer__list-item">
+              <a class="footer__list-link" href="#skills">Skills</a>
             </li>
-            <li class="header__list-item">
-              <a class="header__list-link" href="#projects">Projects</a>
+            <li class="footer__list-item">
+              <a class="footer__list-link" href="#projects">Projects</a>
             </li>
-            <li class="header__list-item">
-              <a class="header__list-link" href="#contact">Contact</a>
+            <li class="footer__list-item">
+              <a class="footer__list-link" href="#contact">Contact</a>
             </li>
           </ul>
         </nav>
-      </div>
-    </header>
-
-    <main class="main">
-      <div class="main__wrapper">
-        <section class="section section--row">
-          <img class="section__profile-img" src="./assets/images/profile_img.png" alt="Profile picture"
-            fetchpriority="high" />
-
-          <article class="greeting-container">
-            <p class="greeting-container__text">Hello, I'm</p>
-            <h2 class="greeting-container__title">Agnieska Jackevic</h2>
-            <p class="greeting-container__text">Junior Frontend Developer</p>
-            <p class="greeting-container__text">Let's get acquainted!</p>
-
-            <div class="buttons-container buttons-container--margin">
-              <a class="buttons-container__button" href="./assets/cv/Agnieska_Jackevic_CV.pdf" target="_blank">Show
-                CV</a>
-              <a class="buttons-container__button buttons-container__button--dark" href="#contact">Contact Info</a>
-            </div>
-
-            <div class="buttons-container buttons-container--margin">
-              <a href="https://www.linkedin.com/in/agnieska-jackevic/" target="_blank">
-                <img class="icon icon--hover" src="./assets/logo/linkedin.png" alt="My LinkedIn profile" />
-              </a>
-              <a href="https://github.com/agneja00" target="_blank">
-                <img class="icon icon--hover" src="./assets/logo/github.png" alt="My Github profile" />
-              </a>
-            </div>
-          </article>
-        </section>
-      </div>
-
-      <div class="main__wrapper">
-        <section class="section" id="about">
-          <p class="section__first-text">Get To Know More</p>
-          <h2 class="section__title">About Me</h2>
-          <div class="about-container">
-            <section class="details-container">
-              <img class="icon" src="https://icons.veryicon.com/png/o/miscellaneous/zr_icon/work-experience-2.png"
-                alt="Experience icon" />
-              <h3 class="details-container__title">Experience</h3>
-              <div class="info__container">
-                <p class="details-container__text">6 years</p>
-                <p class="details-container__text">
-                  Waiter, Consultant, Customer Support Specialist, Contact
-                  Center Agent, Assistant Sales Manager
-                </p>
-                <p class="details-container__text details-container__text--bold">
-                  Belmontas, Sportland, Pigu.lt, Worldline Lietuva, OlyBet Group
-                </p>
-              </div>
-            </section>
-
-            <section class="details-container">
-              <img class="icon" src="https://icons.veryicon.com/png/o/miscellaneous/life-class/education-18.png"
-                alt="Education icon" />
-              <h3 class="details-container__title">Education</h3>
-              <div class="info">
-                <div class="info__container">
-                  <p class="details-container__text">480h</p>
-                  <p class="details-container__text">
-                    Junior Frontend Specialist
-                  </p>
-                  <p class="details-container__text details-container__text--bold">
-                    CodeAcademy
-                  </p>
-                </div>
-                <div class="info-container">
-                  <p class="details-container__text">104h</p>
-                  <p class="details-container__text">
-                    Frontend Career Accelerator
-                  </p>
-                  <p class="details-container__text details-container__text--bold">
-                    IamJunior
-                  </p>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <p class="section__paragraph">
-            After graduating from a programming course, I’m excited to begin my
-            journey as a junior developer. I'm passionate about taking on new
-            challenges, always looking for innovative ways to solve problems and
-            improve my skills. Known for my curiosity and quick-learning
-            mindset, I’m constantly seeking out opportunities to grow. Beyond my
-            technical side, I value connection and teamwork. My friendly nature
-            makes it easy to communicate and collaborate effectively, adding to
-            a positive and productive work environment. In my free time, I enjoy
-            refining my projects with new skills I’ve learned, giving me a clear
-            sense of my progress as I advance in the field.
-          </p>
-        </section>
-      </div>
-
-      <div class="main__wrapper">
-        <section class="section" id="skills">
-          <p class="section__first-text">Explore My</p>
-          <h2 class="section__title">Skills & Tools</h2>
-
-          <div class="skills-container">
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/html.png" alt="HTML icon" />
-              <h3>HTML</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/css.png" alt="CSS icon" />
-              <h3>CSS</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/sass.png" alt="SASS icon" />
-              <h3>SASS</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/bootstrap.svg" alt="Bootstrap icon" />
-              <h3>Bootstrap</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/js.png" alt="JavaScript icon" />
-              <h3>JavaScript</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/node_js.png" alt="Node icon" />
-              <h3>Node JS</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/express_js.png" alt="Express icon" />
-              <h3>Express JS</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/yarn.png" alt="Yarn icon" />
-              <h3>Yarn</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/pnpm.png" alt="Pnpm icon" />
-              <h3>Pnpm</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/react.png" alt="React icon" />
-              <h3>React JS</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/typescript.png" alt="TypeScript icon" />
-              <h3>TypeScript</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/reaact-test.png" alt="React Testing Library icon" />
-              <h3>React Testing Library</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/jest.png" alt="Jest icon" />
-              <h3>Jest</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/react-query.png" alt="react-query icon" />
-              <h3>React Query</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/reacthookform.png" alt="React-hook-form icon" />
-              <h3>React Hook Form</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/formik.webp" alt="Formik icon" />
-              <h3>Formik</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/zod.webp" alt="Zod icon" />
-              <h3>Zod</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/material_ui.png" alt="Material UI icon" />
-              <h3>Material UI</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/mongodb.png" alt="MongoDB icon" />
-              <h3>MongoDB</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/postgreSQL.png" alt="PostgreSQL icon" />
-              <h3>PostgreSQL</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/prisma.png" alt="Prisma icon" />
-              <h3>Prisma</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/trpc.webp" alt="tRPC icon" />
-              <h3>tRPC</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/api.png" alt="APIs icon" />
-              <h3>RESTful APIs</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/responsive_design.png" alt="Responsive design icon" />
-              <h3>Responsive Websites</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/bem.svg" alt="BEM icon" />
-              <h3>BEM metchodology</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/github.png" alt="Github icon" />
-              <h3>Github</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/vs.png" alt="VS Code icon" />
-              <h3>VS Code</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/webpack.png" alt="Webpack icon" />
-              <h3>Webpack</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/vercel.svg" alt="Vercel icon" />
-              <h3>Vercel</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/heroku.png" alt="Heroku icon" />
-              <h3>Heroku</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/eslint.svg" alt="ESLint icon" />
-              <h3>ESLint</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/prettier.png" alt="Prettier icon" />
-              <h3>Prettier</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/docker.png" alt="Docker icon" />
-              <h3>Docker</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/cloudinary.png" alt="Cloudinary icon" />
-              <h3>Cloudinary</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/aws.png" alt="AWS icon" />
-              <h3>AWS</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/sendgrid.png" alt="SendGrid icon" />
-              <h3>SendGrid</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/sentry.webp" alt="Sentry icon" />
-              <h3>Sentry</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/mixpanel.png" alt="Mixpanel icon" />
-              <h3>Mixpanel</h3>
-            </article>
-
-            <article class="skills-container__skill">
-              <img class="icon" src="./assets/logo/datadog.svg" alt="Datadog icon" />
-              <h3>Datadog</h3>
-            </article>
-          </div>
-        </section>
-      </div>
-
-      <div class="main__wrapper">
-        <section class="section" id="projects">
-          <p class="section__first-text">Browse My Recent</p>
-          <h2 class="section__title">Projects</h2>
-
-          <div class="projects-container">
-            <article class="projects-container__project">
-              <img class="projects-container__img" src="./assets/images/weatherapp.png" alt="Project Weather App" />
-              <h2 class="projects-container__project-title">Weather App</h2>
-              <div class="buttons-container buttons-container--margin">
-                <a class="buttons-container__button buttons-container__button--project"
-                  href="https://github.com/agneja00/WeatherApp" target="_blank">Github</a>
-                <a class="buttons-container__button buttons-container__button--project"
-                  href="https://weather-app-rho-blond.vercel.app/" target="_blank">Live Demo</a>
-              </div>
-            </article>
-
-            <article class="projects-container__project">
-              <img class="projects-container__img" src="./assets/images/grocery_list.png"
-                alt="Project Grocery List App" />
-              <h2 class="projects-container__project-title">Grocery List</h2>
-              <div class="buttons-container buttons-container--margin">
-                <a class="buttons-container__button buttons-container__button--project"
-                  href="https://github.com/agneja00/Grocery-List" target="_blank">Github</a>
-                <a class="buttons-container__button buttons-container__button--project"
-                  href="https://grocery-list-beryl.vercel.app/" target="_blank">Live Demo</a>
-              </div>
-            </article>
-
-            <article class="projects-container__project">
-              <img class="projects-container__img" src="./assets/images/dragon_killer.png"
-                alt="Project Dragon Killer Game" />
-              <h2 class="projects-container__project-title">Dragon Killer</h2>
-              <div class="buttons-container buttons-container--margin">
-                <a class="buttons-container__button buttons-container__button--project"
-                  href="https://github.com/agneja00/Dragon-Knight-Game" target="_blank">Github</a>
-                <a class="buttons-container__button buttons-container__button--project"
-                  href="https://dragon-knight-game.vercel.app/" target="_blank">Live Demo</a>
-              </div>
-            </article>
-
-            <article class="projects-container__project">
-              <img class="projects-container__img" src="./assets/images/netflix_app.png" alt="Project Netflix clone" />
-              <h2 class="projects-container__project-title">Netflix clone</h2>
-              <div class="buttons-container buttons-container--margin">
-                <a class="buttons-container__button buttons-container__button--project"
-                  href="https://github.com/agneja00/Netflix-clone" target="_blank">Github</a>
-                <a class="buttons-container__button buttons-container__button--project"
-                  href="https://netflix-clone-app-mauve-two.vercel.app/" target="_blank">Live Demo</a>
-              </div>
-            </article>
-
-            <article class="projects-container__project">
-              <img class="projects-container__img" src="./assets/images/home_service.png" alt="Home Service" />
-              <h2 class="projects-container__project-title">Home Service</h2>
-              <div class="buttons-container buttons-container--margin">
-                <a class="buttons-container__button buttons-container__button--project"
-                  href="https://github.com/agneja00/FEAC" target="_blank">Github</a>
-                <a class="buttons-container__button buttons-container__button--project"
-                  href="https://home-services-f898b008a33e.herokuapp.com/" target="_blank">Live Demo</a>
-              </div>
-            </article>
-
-            <article class="projects-container__project">
-              <img class="projects-container__img" src="./assets/images/web_portfolio.png"
-                alt="Project Web Portfolio" />
-              <h2 class="projects-container__project-title">Portfolio</h2>
-              <div class="buttons-container buttons-container--margin">
-                <a class="buttons-container__button buttons-container__button--project"
-                  href="https://github.com/agneja00/Web-Portfolio" target="_blank">Github</a>
-                <a class="buttons-container__button buttons-container__button--project" href="/">Live Demo</a>
-              </div>
-            </article>
-
-            <article class="projects-container__project">
-              <img class="projects-container__img" src="./assets/images/Idea_space.png" alt="Project Idea Space" />
-              <h2 class="projects-container__project-title">Idea Space</h2>
-              <div class="buttons-container buttons-container--margin">
-                <a class="buttons-container__button buttons-container__button--project"
-                  href="https://github.com/agneja00/Idea_Space" target="_blank">Github</a>
-                <a class="buttons-container__button buttons-container__button--project"
-                  href="https://ideaspace-4fcd43ee8a12.herokuapp.com/" target="_blank">Live Demo</a>
-              </div>
-            </article>
-          </div>
-        </section>
-      </div>
-
-      <div class="main__wrapper">
-        <section class="section" id="contact">
-          <p class="section__first-text">Get in Touch</p>
-          <h2 class="section__title">Contact Me</h2>
-
-          <div class="contact-container">
-            <div class="contact-container__item">
-              <img class="icon" src="./assets/images/mail.png" alt="Email icon" />
-              <a class="contact-container__link" href="mailto:agnieshaa00@gmail.com">agnieshaa00@gmail.com</a>
-            </div>
-
-            <div class="contact-container__item">
-              <img class="icon" src="./assets/images/phone.avif" alt="Phone icon" />
-              <a class="contact-container__link" href="tel:+37064707135">+37064707135</a>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
-
-    <footer class="footer">
-      <nav class="footer__links">
-        <ul class="footer__list">
-          <li class="footer__list-item">
-            <a class="footer__list-link" href="#about">About</a>
-          </li>
-          <li class="footer__list-item">
-            <a class="footer__list-link" href="#skills">Skills</a>
-          </li>
-          <li class="footer__list-item">
-            <a class="footer__list-link" href="#projects">Projects</a>
-          </li>
-          <li class="footer__list-item">
-            <a class="footer__list-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <p class="footer__paragraph">
-        Copyright © 2026 Agnieska Jackevic. All Rights Reserved.
-      </p>
-    </footer>
-  </div>
-  <div id="scroll-spacer"></div>
-</body>
-
+        <p class="footer__paragraph">
+          Copyright © 2026 Agnieska Jackevic. All Rights Reserved.
+        </p>
+      </footer>
+    </div>
+    <div id="scroll-spacer"></div>
+  </body>
 </html>
