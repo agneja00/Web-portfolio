@@ -392,8 +392,6 @@ body {
 }
 .contact-container__link:hover, .contact-container__link:focus {
   color: rgb(163, 163, 163);
-  outline: 2px solid rgb(85, 85, 85);
-  outline-offset: 2px;
 }
 
 .buttons-container {
