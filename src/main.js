@@ -79,11 +79,75 @@ function loop() {
   requestAnimationFrame(loop);
 }
 
+let touchStartY = 0;
+let touchEndY = 0;
+let touchVelocity = 0;
+let lastTouchY = 0;
+let lastTime = 0;
+let momentumId = null;
+
+function onTouchStart(e) {
+  if (state.isMenuOpen) return;
+
+  if (momentumId) {
+    cancelAnimationFrame(momentumId);
+    momentumId = null;
+  }
+
+  touchStartY = e.touches[0].clientY;
+  lastTouchY = touchStartY;
+  lastTime = Date.now();
+  touchVelocity = 0;
+}
+
+function onTouchMove(e) {
+  if (state.isMenuOpen) return;
+
+  e.preventDefault();
+  touchEndY = e.touches[0].clientY;
+
+  const delta = touchStartY - touchEndY;
+  const currentTime = Date.now();
+  const timeDelta = Math.max(1, currentTime - lastTime);
+
+  touchVelocity = ((lastTouchY - touchEndY) / timeDelta) * 16;
+
+  state.target += delta * 2;
+  state.target = Math.max(0, Math.min(state.target, state.maxScroll));
+
+  touchStartY = touchEndY;
+  lastTouchY = touchEndY;
+  lastTime = currentTime;
+}
+
+function onTouchEnd() {
+  const applyMomentum = () => {
+    if (Math.abs(touchVelocity) < 0.5) {
+      momentumId = null;
+      return;
+    }
+
+    touchVelocity *= 0.97;
+    state.target += touchVelocity * 2;
+    state.target = Math.max(0, Math.min(state.target, state.maxScroll));
+
+    momentumId = requestAnimationFrame(applyMomentum);
+  };
+
+  if (Math.abs(touchVelocity) > 1) {
+    momentumId = requestAnimationFrame(applyMomentum);
+  }
+}
+
 window.addEventListener("resize", onResize);
 
 window.addEventListener("wheel", onWheel, {
   passive: false,
 });
+
+window.addEventListener("touchstart", onTouchStart, { passive: false });
+window.addEventListener("touchmove", onTouchMove, { passive: false });
+window.addEventListener("touchend", onTouchEnd, { passive: false });
 
 document
   .querySelectorAll('a[href^="#"]')
