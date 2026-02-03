@@ -505,6 +505,7 @@ img {
   color: rgb(163, 163, 163);
 }
 .footer__paragraph {
+  font-size: 90%;
   text-align: center;
   color: rgb(85, 85, 85);
   padding: 2rem 2rem 1rem 2rem;
