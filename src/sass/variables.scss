@@ -1,21 +1,40 @@
 $primary-color: rgb(85, 85, 85);
 $secondary-color: rgb(255, 255, 255);
-$tertiary-color: rgb(163, 163, 163);
+$accent: #10b981;
+$accent-hover: #059669;
+$accent-active: #047857;
+$accent-soft: #d1fae5;
 $font-size-small: 1.3rem;
 $font-size-large: 1.5rem;
 $padding-container: 1.5rem;
+$border-color: rgb(229, 231, 235);
 
 @mixin transform-hover {
   transform: scale(1.1);
   transition: 0.3s;
 }
 
+@mixin focus-ring {
+  outline: 3px solid rgba(16, 185, 129, 0.45);
+  outline-offset: 3px;
+  border-radius: 0.8rem;
+}
+
+@mixin interactive {
+  transition:
+    transform 0.15s ease,
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
 @mixin link-hover {
-  color: $tertiary-color;
+  color: $accent;
 }
 
 @mixin border-container-style {
-  border: rgb(163, 163, 163) 0.1rem solid;
+  border: $border-color 0.1rem solid;
   border-radius: 2rem;
 }
 

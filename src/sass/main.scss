@@ -118,7 +118,6 @@
     &--bold {
       font-weight: 900;
       font-size: 0.9rem;
-      color: rgb(0, 0, 0);
     }
   }
 }
@@ -130,16 +129,14 @@
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  @include border-container-style;
   width: 100%;
   padding: $padding-container;
+  @include border-container-style;
 
   @include respond-medium {
-    flex-direction: row;
     padding: 2rem;
     gap: 1.2rem;
   }
@@ -157,6 +154,9 @@
     gap: 0.5rem;
     width: 5rem;
     text-align: center;
+    padding: 0.6rem;
+    border-radius: 1.2rem;
+    @include interactive;
 
     @include respond-medium {
       width: 7rem;
@@ -176,16 +176,24 @@
   justify-content: center;
   gap: 1.5rem;
   width: 100%;
+  cursor: pointer;
 
   &__project {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 1rem;
     @include border-container-style;
     padding: $padding-container;
     width: 100%;
+    @include interactive;
+
+    &:hover {
+      border-color: $accent;
+      box-shadow: 0 14px 30px rgba(16, 185, 129, 0.12);
+      transform: translateY(-2px);
+    }
+
     @include respond-large {
       width: 47%;
     }
@@ -199,12 +207,12 @@
     height: 12.5rem;
     width: 100%;
     object-fit: cover;
-    border-radius: 0.5rem;
-    transition: transform 0.3s ease;
+    border-radius: 0.8rem;
+    @include interactive;
+  }
 
-    &:hover {
-      transform: scale(1.05);
-    }
+  &__project:hover &__img {
+    transform: scale(1.02);
   }
 }
 
@@ -240,13 +248,12 @@
   }
 
   &__link {
-    color: rgb(53, 53, 53);
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: $primary-color;
+    text-decoration-color: rgba(16, 185, 129, 0.35);
+    @include interactive;
 
-    &:hover,
-    &:focus {
-      @include link-hover;
+    &:hover {
+      color: $accent;
     }
   }
 }
@@ -264,43 +271,60 @@
 
   &__button {
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.9);
-    border: rgb(53, 53, 53) 0.1rem solid;
-    font-size: 80%;
+    background: $accent;
+    color: $secondary-color;
+    border: 0.1rem solid $accent;
     font-weight: 600;
     padding: 1rem;
     border-radius: 2rem;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s ease;
+    @include interactive;
 
-    &:hover,
-    &:focus {
-      color: $secondary-color;
-      background-color: rgb(53, 53, 53);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      outline: 2px solid $primary-color;
-      outline-offset: 2px;
+    &:hover {
+      background: $accent-hover;
+      border-color: $accent-hover;
+      transform: translateY(-1px);
     }
 
     &:active {
+      background: $accent-active;
+      border-color: $accent-active;
       transform: translateY(0);
     }
+  }
 
-    &--dark {
+  &__button--dark {
+    background: transparent;
+    color: $accent;
+    border: 0.1rem solid $accent;
+
+    &:hover {
+      background: $accent;
       color: $secondary-color;
-      background-color: rgb(53, 53, 53);
-
-      &:hover,
-      &:focus {
-        background-color: rgba(0, 0, 0, 0.9);
-      }
+      border-color: $accent;
     }
+  }
 
-    &--project {
-      width: 50%;
+  &__button--project {
+    background: transparent;
+    color: $accent;
+    border: 0.1rem solid $accent;
+
+    &:hover {
+      background: $accent;
+      color: $secondary-color;
     }
+  }
+}
+
+.projects-container .buttons-container__button--project:nth-child(2) {
+  background: $accent;
+  color: $secondary-color;
+
+  &:hover {
+    background: $accent-hover;
+    border-color: $accent-hover;
   }
 }
 

@@ -27,6 +27,13 @@ body {
   height: 0;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(16, 185, 129, 0.45);
+  outline-offset: 3px;
+  border-radius: 0.8rem;
+}
+
 .header {
   background-color: rgb(0, 0, 0);
 }
@@ -129,6 +136,7 @@ body {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 1.3rem;
+  transition: transform 0.15s ease, color 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 @media only screen and (min-width: 768px) {
   .header__list-link {
@@ -136,7 +144,15 @@ body {
   }
 }
 .header__list-link:hover {
-  color: rgb(163, 163, 163);
+  color: #10b981;
+}
+.header__list-link:active {
+  color: #10b981;
+}
+.header__list-link:focus-visible {
+  outline: 3px solid rgba(16, 185, 129, 0.45);
+  outline-offset: 3px;
+  border-radius: 0.8rem;
 }
 
 .main__wrapper {
@@ -243,7 +259,7 @@ body {
 .details-container {
   text-align: center;
   line-height: 2rem;
-  border: rgb(163, 163, 163) 0.1rem solid;
+  border: rgb(229, 231, 235) 0.1rem solid;
   border-radius: 2rem;
   padding: 1.5rem;
   width: 100%;
@@ -260,7 +276,6 @@ body {
 .details-container__text--bold {
   font-weight: 900;
   font-size: 0.9rem;
-  color: rgb(0, 0, 0);
 }
 
 .info__container {
@@ -270,18 +285,16 @@ body {
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  border: rgb(163, 163, 163) 0.1rem solid;
-  border-radius: 2rem;
   width: 100%;
   padding: 1.5rem;
+  border: rgb(229, 231, 235) 0.1rem solid;
+  border-radius: 2rem;
 }
 @media only screen and (min-width: 510px) {
   .skills-container {
-    flex-direction: row;
     padding: 2rem;
     gap: 1.2rem;
   }
@@ -300,6 +313,9 @@ body {
   gap: 0.5rem;
   width: 5rem;
   text-align: center;
+  padding: 0.6rem;
+  border-radius: 1.2rem;
+  transition: transform 0.15s ease, color 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 @media only screen and (min-width: 510px) {
   .skills-container__skill {
@@ -320,17 +336,23 @@ body {
   justify-content: center;
   gap: 1.5rem;
   width: 100%;
+  cursor: pointer;
 }
 .projects-container__project {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 1rem;
-  border: rgb(163, 163, 163) 0.1rem solid;
+  border: rgb(229, 231, 235) 0.1rem solid;
   border-radius: 2rem;
   padding: 1.5rem;
   width: 100%;
+  transition: transform 0.15s ease, color 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.projects-container__project:hover {
+  border-color: #10b981;
+  box-shadow: 0 14px 30px rgba(16, 185, 129, 0.12);
+  transform: translateY(-2px);
 }
 @media only screen and (min-width: 800px) {
   .projects-container__project {
@@ -346,11 +368,11 @@ body {
   height: 12.5rem;
   width: 100%;
   object-fit: cover;
-  border-radius: 0.5rem;
-  transition: transform 0.3s ease;
+  border-radius: 0.8rem;
+  transition: transform 0.15s ease, color 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.projects-container__img:hover {
-  transform: scale(1.05);
+.projects-container__project:hover .projects-container__img {
+  transform: scale(1.02);
 }
 
 .contact-container {
@@ -359,7 +381,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  border: rgb(163, 163, 163) 0.1rem solid;
+  border: rgb(229, 231, 235) 0.1rem solid;
   border-radius: 2rem;
   padding: 2rem 2.5rem;
 }
@@ -386,12 +408,12 @@ body {
   transition: 0.3s;
 }
 .contact-container__link {
-  color: rgb(53, 53, 53);
-  text-decoration: none;
-  transition: color 0.3s ease;
+  color: rgb(85, 85, 85);
+  text-decoration-color: rgba(16, 185, 129, 0.35);
+  transition: transform 0.15s ease, color 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.contact-container__link:hover, .contact-container__link:focus {
-  color: rgb(163, 163, 163);
+.contact-container__link:hover {
+  color: #10b981;
 }
 
 .buttons-container {
@@ -406,36 +428,53 @@ body {
 }
 .buttons-container__button {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.9);
-  border: rgb(53, 53, 53) 0.1rem solid;
-  font-size: 80%;
+  background: #10b981;
+  color: rgb(255, 255, 255);
+  border: 0.1rem solid #10b981;
   font-weight: 600;
   padding: 1rem;
   border-radius: 2rem;
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.15s ease, color 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.buttons-container__button:hover, .buttons-container__button:focus {
-  color: rgb(255, 255, 255);
-  background-color: rgb(53, 53, 53);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  outline: 2px solid rgb(85, 85, 85);
-  outline-offset: 2px;
+.buttons-container__button:hover {
+  background: #059669;
+  border-color: #059669;
+  transform: translateY(-1px);
 }
 .buttons-container__button:active {
+  background: #047857;
+  border-color: #047857;
   transform: translateY(0);
 }
 .buttons-container__button--dark {
-  color: rgb(255, 255, 255);
-  background-color: rgb(53, 53, 53);
+  background: transparent;
+  color: #10b981;
+  border: 0.1rem solid #10b981;
 }
-.buttons-container__button--dark:hover, .buttons-container__button--dark:focus {
-  background-color: rgba(0, 0, 0, 0.9);
+.buttons-container__button--dark:hover {
+  background: #10b981;
+  color: rgb(255, 255, 255);
+  border-color: #10b981;
 }
 .buttons-container__button--project {
-  width: 50%;
+  background: transparent;
+  color: #10b981;
+  border: 0.1rem solid #10b981;
+}
+.buttons-container__button--project:hover {
+  background: #10b981;
+  color: rgb(255, 255, 255);
+}
+
+.projects-container .buttons-container__button--project:nth-child(2) {
+  background: #10b981;
+  color: rgb(255, 255, 255);
+}
+.projects-container .buttons-container__button--project:nth-child(2):hover {
+  background: #059669;
+  border-color: #059669;
 }
 
 img {
@@ -502,7 +541,7 @@ img {
   font-size: 1.2rem;
 }
 .footer__list-link:hover {
-  color: rgb(163, 163, 163);
+  color: #10b981;
 }
 .footer__paragraph {
   font-size: 90%;

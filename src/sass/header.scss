@@ -49,7 +49,10 @@
     &-line {
       height: 0.12rem;
       background-color: $secondary-color;
-      transition: transform 0.4s, background-color 0.4s, opacity 0.4s;
+      transition:
+        transform 0.4s,
+        background-color 0.4s,
+        opacity 0.4s;
     }
 
     &.active {
@@ -117,6 +120,7 @@
       text-decoration: none;
       color: $secondary-color;
       font-size: $font-size-small;
+      @include interactive;
 
       @include respond-moreMedium {
         font-size: $font-size-large;
@@ -124,6 +128,13 @@
 
       &:hover {
         @include link-hover;
+      }
+      &:active {
+        color: $accent;
+      }
+
+      &:focus-visible {
+        @include focus-ring;
       }
     }
   }
