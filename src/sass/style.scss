@@ -14,7 +14,6 @@ body {
 body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
 }
 
 #scroll-root {
@@ -32,6 +31,28 @@ body {
 a:focus-visible,
 button:focus-visible {
   @include focus-ring;
+}
+
+@include respond-moreMedium {
+  body {
+    -ms-overflow-style: auto;
+    scrollbar-width: auto;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+      display: block;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(16, 185, 129, 0.55);
+      border-radius: 999px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.06);
+    }
+  }
 }
 
 @import "header.scss";

@@ -12,7 +12,6 @@ body {
 body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
 }
 
 #scroll-root {
@@ -34,6 +33,24 @@ button:focus-visible {
   border-radius: 0.8rem;
 }
 
+@media only screen and (min-width: 768px) {
+  body {
+    -ms-overflow-style: auto;
+    scrollbar-width: auto;
+  }
+  body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    display: block;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: rgba(16, 185, 129, 0.55);
+    border-radius: 999px;
+  }
+  body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.06);
+  }
+}
 .header {
   background-color: rgb(0, 0, 0);
 }
@@ -129,8 +146,7 @@ button:focus-visible {
   }
 }
 .header__list-item:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
+  transform: scale(1.05);
 }
 .header__list-link {
   text-decoration: none;
@@ -404,8 +420,7 @@ button:focus-visible {
   transition: transform 0.3s ease;
 }
 .contact-container__item:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
+  transform: scale(1.05);
 }
 .contact-container__link {
   color: rgb(85, 85, 85);
@@ -505,8 +520,7 @@ img {
   transition: transform 0.3s ease;
 }
 .icon--hover:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
+  transform: scale(1.05);
 }
 
 @media only screen and (min-width: 768px) {
@@ -532,8 +546,7 @@ img {
   }
 }
 .footer__list-item:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
+  transform: scale(1.05);
 }
 .footer__list-link {
   color: rgba(0, 0, 0, 0.9);
