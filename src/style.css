@@ -52,7 +52,7 @@ button:focus-visible {
   }
 }
 .header {
-  background-color: rgb(0, 0, 0);
+  background-color: #000000;
 }
 .header__container {
   display: flex;
@@ -66,8 +66,8 @@ button:focus-visible {
   animation: typing 2.5s steps(13) infinite alternate-reverse;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 0.1rem solid rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
+  border-right: 0.1rem solid #ffffff;
+  color: #ffffff;
   font-family: monospace;
 }
 @-webkit-keyframes typing {
@@ -95,11 +95,11 @@ button:focus-visible {
 }
 .header__menu-line {
   height: 0.12rem;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   transition: transform 0.4s, background-color 0.4s, opacity 0.4s;
 }
 .header__menu.active .header__menu-line--first {
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   transform: translateY(0.68rem) rotate(-45deg);
 }
 .header__menu.active .header__menu-line--second {
@@ -107,7 +107,7 @@ button:focus-visible {
   opacity: 0;
 }
 .header__menu.active .header__menu-line--third {
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   transform: translateY(-0.68rem) rotate(45deg);
 }
 .header__links {
@@ -150,7 +150,7 @@ button:focus-visible {
 }
 .header__list-link {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   font-size: 1.3rem;
   transition: transform 0.15s ease, color 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -207,10 +207,10 @@ button:focus-visible {
   }
 }
 .section__first-text {
-  color: rgb(85, 85, 85);
+  color: #555555;
 }
 .section__paragraph {
-  color: rgb(85, 85, 85);
+  color: #555555;
   text-align: justify;
   line-height: 1.5rem;
 }
@@ -233,7 +233,7 @@ button:focus-visible {
   gap: 1rem;
 }
 .greeting-container__text {
-  color: rgb(85, 85, 85);
+  color: #555555;
   font-weight: 600;
 }
 @media only screen and (min-width: 768px) {
@@ -275,7 +275,7 @@ button:focus-visible {
 .details-container {
   text-align: center;
   line-height: 2rem;
-  border: rgb(229, 231, 235) 0.1rem solid;
+  border: #e5e7eb 0.1rem solid;
   border-radius: 2rem;
   padding: 1.5rem;
   width: 100%;
@@ -287,7 +287,7 @@ button:focus-visible {
   }
 }
 .details-container__text {
-  color: rgb(85, 85, 85);
+  color: #555555;
 }
 .details-container__text--bold {
   font-weight: 900;
@@ -306,7 +306,7 @@ button:focus-visible {
   gap: 2rem;
   width: 100%;
   padding: 1.5rem;
-  border: rgb(229, 231, 235) 0.1rem solid;
+  border: #e5e7eb 0.1rem solid;
   border-radius: 2rem;
 }
 @media only screen and (min-width: 510px) {
@@ -359,7 +359,7 @@ button:focus-visible {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  border: rgb(229, 231, 235) 0.1rem solid;
+  border: #e5e7eb 0.1rem solid;
   border-radius: 2rem;
   padding: 1.5rem;
   width: 100%;
@@ -397,7 +397,7 @@ button:focus-visible {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  border: rgb(229, 231, 235) 0.1rem solid;
+  border: #e5e7eb 0.1rem solid;
   border-radius: 2rem;
   padding: 2rem 2.5rem;
 }
@@ -423,7 +423,7 @@ button:focus-visible {
   transform: scale(1.05);
 }
 .contact-container__link {
-  color: rgb(85, 85, 85);
+  color: #555555;
   text-decoration-color: rgba(16, 185, 129, 0.35);
   transition: transform 0.15s ease, color 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -444,7 +444,7 @@ button:focus-visible {
 .buttons-container__button {
   text-decoration: none;
   background: #10b981;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   border: 0.1rem solid #10b981;
   font-weight: 600;
   padding: 1rem;
@@ -470,7 +470,7 @@ button:focus-visible {
 }
 .buttons-container__button--dark:hover {
   background: #10b981;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   border-color: #10b981;
 }
 .buttons-container__button--project {
@@ -480,12 +480,12 @@ button:focus-visible {
 }
 .buttons-container__button--project:hover {
   background: #10b981;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .projects-container .buttons-container__button--project:nth-child(2) {
   background: #10b981;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 .projects-container .buttons-container__button--project:nth-child(2):hover {
   background: #059669;
@@ -559,7 +559,7 @@ img {
 .footer__paragraph {
   font-size: 90%;
   text-align: center;
-  color: rgb(85, 85, 85);
+  color: #555555;
   padding: 2rem 2rem 1rem 2rem;
 }
 

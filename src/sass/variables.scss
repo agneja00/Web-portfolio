@@ -1,5 +1,5 @@
-$primary-color: rgb(85, 85, 85);
-$secondary-color: rgb(255, 255, 255);
+$primary-color: #555555;
+$secondary-color: #ffffff;
 $accent: #10b981;
 $accent-hover: #059669;
 $accent-active: #047857;
@@ -7,7 +7,7 @@ $accent-soft: #d1fae5;
 $font-size-small: 1.3rem;
 $font-size-large: 1.5rem;
 $padding-container: 1.5rem;
-$border-color: rgb(229, 231, 235);
+$border-color: #e5e7eb;
 
 @mixin transform-hover {
   transform: scale(1.05);
