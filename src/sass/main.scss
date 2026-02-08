@@ -264,67 +264,30 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-
-  &--margin {
-    margin-top: 1rem;
-  }
+  margin-top: 1rem;
 
   &__button {
     text-decoration: none;
-    background: $accent;
-    color: $secondary-color;
+    background: transparent;
+    color: $accent;
     border: 0.1rem solid $accent;
     font-weight: 600;
-    padding: 1rem;
+    padding: 0.85rem 1rem;
     border-radius: 2rem;
     text-align: center;
     cursor: pointer;
     @include interactive;
 
+    &--dark {
+      background: $accent;
+      color: $secondary-color;
+    }
+
     &:hover {
+      color: $secondary-color;
       background: $accent-hover;
-      border-color: $accent-hover;
       transform: translateY(-1px);
     }
-
-    &:active {
-      background: $accent-active;
-      border-color: $accent-active;
-      transform: translateY(0);
-    }
-  }
-
-  &__button--dark {
-    background: transparent;
-    color: $accent;
-    border: 0.1rem solid $accent;
-
-    &:hover {
-      background: $accent;
-      color: $secondary-color;
-      border-color: $accent;
-    }
-  }
-
-  &__button--project {
-    background: transparent;
-    color: $accent;
-    border: 0.1rem solid $accent;
-
-    &:hover {
-      background: $accent;
-      color: $secondary-color;
-    }
-  }
-}
-
-.projects-container .buttons-container__button--project:nth-child(2) {
-  background: $accent;
-  color: $secondary-color;
-
-  &:hover {
-    background: $accent-hover;
-    border-color: $accent-hover;
   }
 }
 

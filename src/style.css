@@ -437,59 +437,28 @@ button:focus-visible {
   width: 100%;
   justify-content: center;
   align-items: center;
-}
-.buttons-container--margin {
   margin-top: 1rem;
 }
 .buttons-container__button {
   text-decoration: none;
-  background: #10b981;
-  color: #ffffff;
+  background: transparent;
+  color: #10b981;
   border: 0.1rem solid #10b981;
   font-weight: 600;
-  padding: 1rem;
+  padding: 0.85rem 1rem;
   border-radius: 2rem;
   text-align: center;
   cursor: pointer;
   transition: transform 0.15s ease, color 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.buttons-container__button:hover {
-  background: #059669;
-  border-color: #059669;
-  transform: translateY(-1px);
-}
-.buttons-container__button:active {
-  background: #047857;
-  border-color: #047857;
-  transform: translateY(0);
-}
 .buttons-container__button--dark {
-  background: transparent;
-  color: #10b981;
-  border: 0.1rem solid #10b981;
-}
-.buttons-container__button--dark:hover {
-  background: #10b981;
-  color: #ffffff;
-  border-color: #10b981;
-}
-.buttons-container__button--project {
-  background: transparent;
-  color: #10b981;
-  border: 0.1rem solid #10b981;
-}
-.buttons-container__button--project:hover {
   background: #10b981;
   color: #ffffff;
 }
-
-.projects-container .buttons-container__button--project:nth-child(2) {
-  background: #10b981;
+.buttons-container__button:hover {
   color: #ffffff;
-}
-.projects-container .buttons-container__button--project:nth-child(2):hover {
   background: #059669;
-  border-color: #059669;
+  transform: translateY(-1px);
 }
 
 img {
