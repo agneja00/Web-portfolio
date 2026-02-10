@@ -4,12 +4,12 @@ Welcome to my personal simple web portfolio! This is a responsive website that s
 
 ### Features
 
-- About Me Section.
-- Education.
-- Experience.
-- Skills.
-- Personal projects to show my skills.
-- Contact information.
+- About Me Section
+- Education
+- Experience
+- Skills
+- Personal projects to show my skills
+- Contact information
 
 ### Links
 
@@ -18,15 +18,15 @@ Welcome to my personal simple web portfolio! This is a responsive website that s
 
 ### Built with
 
-- **HTML5**: Semantic markup for structure and content.
-- **SASS/SCSS**: CSS preprocessor for maintainable styling.
-- **JavaScript**: For interactive elements and dynamic content.
-- **BEM Methodology**: Ensure that each part of the code has a clear, consistent and descriptive name.
-- **Responsive Design**: Works on all device sizes.
-- **CSS Animations**: For engaging user experience.
-- **Webpack**: Bundle for JS, SCSS and static assets.
-- **html-loader**: Parses HTML and resolves asset paths during build.
-- **Vercel**: deployment platform for fast, global hosting and automatic CI/CD integration.
+- **HTML5**: Semantic markup for structure and content
+- **SASS/SCSS**: CSS preprocessor for maintainable styling
+- **JavaScript**: For interactive elements and dynamic content
+- **BEM Methodology**: Ensure that each part of the code has a clear, consistent and descriptive name
+- **Responsive Design**: Works on all device sizes
+- **CSS Animations**: For engaging user experience
+- **Webpack**: Bundle for JS, SCSS and static assets
+- **html-loader**: Parses HTML and resolves asset paths during build
+- **Vercel**: deployment platform for fast, global hosting and automatic CI/CD integration
 
 ## Author
 
