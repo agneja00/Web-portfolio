@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 html,
@@ -14,6 +17,12 @@ body {
 body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
 }
 
 #scroll-root {
@@ -22,6 +31,10 @@ body {
   left: 0;
   width: 100%;
   will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  -webkit-overflow-scrolling: touch;
 }
 
 #scroll-spacer {
@@ -47,6 +60,11 @@ button:focus-visible {
     &::-webkit-scrollbar-thumb {
       background: rgba(16, 185, 129, 0.55);
       border-radius: 999px;
+      transition: background 0.3s ease;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(16, 185, 129, 0.85);
     }
 
     &::-webkit-scrollbar-track {
