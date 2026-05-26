@@ -5,73 +5,64 @@ const menuLinks = document.querySelector(".header__links");
 const scrollRoot = document.getElementById("scroll-root");
 const spacer = document.getElementById("scroll-spacer");
 
-const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
 const state = {
   current: 0,
   target: 0,
   maxScroll: 0,
-  ease: 0.08,
+  ease: 0.07,
   isMenuOpen: false,
-  isRunning: !isMobile,
+  isRunning: true,
 };
 
-function setMenu(open) {
-  state.isMenuOpen = open;
-  menuBtn.classList.toggle("active", open);
-  menuLinks.classList.toggle("active", open);
-  document.body.style.overflow = open ? "hidden" : "auto";
-
-  if (!open) {
-    state.target = Math.max(0, Math.min(window.scrollY, state.maxScroll));
-  }
-}
-
 function toggleMenu(force) {
-  setMenu(typeof force === "boolean" ? force : !state.isMenuOpen);
+  state.isMenuOpen = typeof force === "boolean" ? force : !state.isMenuOpen;
+
+  menuBtn.classList.toggle("active", state.isMenuOpen);
+  menuLinks.classList.toggle("active", state.isMenuOpen);
 }
 
 menuBtn.addEventListener("click", () => toggleMenu());
 
 function updateBounds() {
   const height = scrollRoot.scrollHeight;
-  spacer.style.height = `${height}px`;
+  if (spacer) {
+    spacer.style.height = height + "px";
+  }
+
   state.maxScroll = Math.max(0, height - window.innerHeight);
-  state.target = Math.max(0, Math.min(window.scrollY, state.maxScroll));
+
+  state.target = Math.max(0, Math.min(state.target, state.maxScroll));
   state.current = Math.max(0, Math.min(state.current, state.maxScroll));
 }
 
 function onResize() {
-  if (window.innerWidth >= 768) setMenu(false);
+  if (window.innerWidth >= 768) {
+    toggleMenu(false);
+  }
   updateBounds();
 }
 
-function onScroll() {
+function onWheel(e) {
   if (state.isMenuOpen) return;
-  state.target = Math.max(0, Math.min(window.scrollY, state.maxScroll));
+
+  e.preventDefault();
+
+  state.target += e.deltaY;
+  state.target = Math.max(0, Math.min(state.target, state.maxScroll));
 }
 
 function onAnchorClick(e) {
   const link = e.currentTarget;
-  const href = link.getAttribute("href");
-
-  if (!href || !href.startsWith("#")) return;
-
-  const id = href.slice(1);
+  const id = link.getAttribute("href").slice(1);
   const targetEl = document.getElementById(id);
   if (!targetEl) return;
 
   e.preventDefault();
-  setMenu(false);
+  toggleMenu(false);
 
-  const y = Math.min(targetEl.offsetTop, state.maxScroll);
-
-  if (isMobile) {
-    window.scrollTo({ top: y, behavior: "smooth" });
-  } else {
-    window.scrollTo({ top: y, behavior: "auto" });
-    state.target = y;
-  }
+  const rect = targetEl.getBoundingClientRect();
+  state.target += rect.top;
+  state.target = Math.max(0, Math.min(state.target, state.maxScroll));
 }
 
 function loop() {
@@ -79,7 +70,7 @@ function loop() {
 
   state.current += (state.target - state.current) * state.ease;
 
-  if (Math.abs(state.target - state.current) < 0.5) {
+  if (Math.abs(state.target - state.current) < 0.1) {
     state.current = state.target;
   }
 
@@ -89,22 +80,25 @@ function loop() {
 }
 
 window.addEventListener("resize", onResize);
-window.addEventListener("scroll", onScroll, { passive: true });
+
+window.addEventListener("wheel", onWheel, {
+  passive: false,
+});
 
 document
   .querySelectorAll('a[href^="#"]')
   .forEach((link) => link.addEventListener("click", onAnchorClick));
 
-const resizeObserver = new ResizeObserver(() => updateBounds());
-resizeObserver.observe(scrollRoot);
+updateBounds();
 
 window.addEventListener("load", () => {
   updateBounds();
-  onScroll();
 });
 
-updateBounds();
+const resizeObserver = new ResizeObserver(() => {
+  updateBounds();
+});
 
-if (!isMobile) {
-  loop();
-}
+resizeObserver.observe(scrollRoot);
+
+loop();
